@@ -16,11 +16,11 @@ export default function Hero() {
             width="1600"
             height="800"
             fetchPriority="high"
-            className="h-full w-full object-cover object-[75%_30%]"
+            className="h-full w-full object-cover object-[75%_8%]"
           />
         </picture>
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-cream/85 via-cream/30 to-transparent" />
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-cream to-transparent" />
+        {/* Clareia só a área do texto; o rosto fica livre de sombreado */}
+        <div aria-hidden="true" className="absolute inset-y-0 left-0 w-[52%] bg-gradient-to-r from-cream/80 via-cream/45 to-transparent" />
       </div>
       <div className="relative mx-auto grid max-w-[1240px] lg:min-h-[620px] lg:grid-cols-2 xl:min-h-[min(84vh,720px)]">
         {/* Texto */}
