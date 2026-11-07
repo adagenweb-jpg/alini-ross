@@ -24,3 +24,4 @@ npm run preview  # testa o build
 - `public/img/` — fotos otimizadas em WebP com `srcset`
 - Cada card de serviço abre o WhatsApp com uma mensagem específica já preenchida.
 # alini-ross
+# alini-ross
