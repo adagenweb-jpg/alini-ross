@@ -62,15 +62,15 @@ export default function Hero() {
         </div>
 
         {/* Foto — mobile: retrato vertical abaixo do texto */}
-        <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[4/3] lg:hidden">
+        <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[16/10] lg:hidden">
           <picture>
-            <source type="image/webp" srcSet="/img/alini-retrato-640.webp 640w, /img/alini-retrato-1026.webp 1026w" sizes="100vw" />
+            <source type="image/webp" srcSet="/img/alini-hero-1024.webp 1024w, /img/alini-hero-1600.webp 1600w" sizes="100vw" />
             <img
-              src="/img/alini-retrato-640.webp"
-              alt="Alini Ross de blazer off-white, sorrindo, com a mão no queixo, em um consultório acolhedor"
-              width="1026"
-              height="1533"
-              className="absolute inset-0 h-full w-full object-cover object-[50%_22%]"
+              src="/img/alini-hero-1024.webp"
+              alt="Alini Ross, de blazer off-white, sentada em uma poltrona de couro, sorrindo"
+              width="1600"
+              height="800"
+              className="absolute inset-0 h-full w-full object-cover object-[74%_30%]"
             />
           </picture>
           <div aria-hidden="true" className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-cream to-transparent" />

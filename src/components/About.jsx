@@ -1,3 +1,4 @@
+import { Branch } from './Logo'
 import { useId, useState } from 'react'
 
 export default function About() {
@@ -5,33 +6,36 @@ export default function About() {
   const moreId = useId()
 
   return (
-    <section id="sobre" className="relative overflow-hidden bg-cream">
-      <div className="mx-auto grid max-w-[1240px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-        {/* Foto — mobile em bloco; desktop como fundo de toda a seção, Alini à esquerda */}
-        <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/9] lg:absolute lg:inset-0 lg:aspect-auto">
+    <section id="sobre" className="relative overflow-hidden bg-sand">
+      <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+        {/* Foto com frase, como no modelo: tom quente à esquerda e fusão com o fundo à direita */}
+        <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[4/3] lg:aspect-auto lg:min-h-[660px]">
           <picture>
-            <source
-              type="image/webp"
-              srcSet="/img/alini-sobre-1024.webp 1024w, /img/alini-sobre-1600.webp 1600w"
-              sizes="100vw"
-            />
+            <source type="image/webp" srcSet="/img/alini-retrato-640.webp 640w, /img/alini-retrato-1026.webp 1026w" sizes="(min-width: 1024px) 50vw, 100vw" />
             <img
-              src="/img/alini-sobre-1600.webp"
-              alt="Alini Ross, de blazer off-white, sentada de lado em uma cadeira de couro, sorrindo"
-              width="1600"
-              height="800"
+              src="/img/alini-retrato-1026.webp"
+              alt="Alini Ross de blazer off-white, sorrindo, com a mão no queixo, em seu consultório"
+              width="1026"
+              height="1533"
               loading="lazy"
               decoding="async"
-              className="absolute inset-0 h-full w-full object-cover object-[22%_30%] lg:object-[30%_30%]"
+              className="absolute inset-0 h-full w-full object-cover object-[55%_22%] lg:object-[62%_28%]"
             />
           </picture>
-          <div aria-hidden="true" className="absolute inset-0 hidden bg-gradient-to-l from-cream/90 via-cream/40 to-transparent lg:block" />
-          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-cream to-transparent lg:hidden" />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#3a2c22]/85 via-[#3a2c22]/20 to-transparent lg:bg-gradient-to-r lg:from-[#3a2c22]/75 lg:via-[#3a2c22]/25 lg:to-transparent" />
+          <div aria-hidden="true" className="absolute inset-y-0 right-0 hidden w-28 bg-gradient-to-l from-sand to-transparent lg:block" />
+
+          <blockquote className="reveal absolute bottom-8 left-6 right-6 sm:left-10 lg:bottom-auto lg:right-auto lg:top-1/2 lg:max-w-[12rem] lg:-translate-y-1/2 lg:left-[max(2rem,calc((100vw-1240px)/2+1.5rem))]">
+            <p className="max-w-[17rem] font-accent text-[1.2rem] italic leading-[1.55] text-ivory/90">
+              Desenvolver-se é escolher, todos os dias, uma vida mais alinhada com o que realmente importa.
+            </p>
+            <span aria-hidden="true" className="mt-6 block h-px w-10 bg-ivory/50" />
+          </blockquote>
         </div>
-        <div aria-hidden="true" className="hidden lg:block lg:min-h-[640px]" />
 
         {/* Texto */}
-        <div className="relative flex items-center px-5 pb-16 pt-6 sm:px-12 lg:py-24 lg:pl-10 xl:pl-14">
+        <div className="relative flex items-center px-5 py-16 sm:px-12 lg:py-24 lg:pl-14 xl:pl-20">
+          <Branch className="pointer-events-none absolute -right-4 top-4 h-56 w-auto rotate-[10deg] text-terra/[0.12] sm:h-72" />
           <div className="relative max-w-[34rem]">
             <p className="eyebrow reveal">Sobre</p>
             <h2 className="reveal mt-4 font-serif text-balance text-[2.6rem] leading-[1.02] text-ink sm:text-[3.3rem]" style={{ '--delay': '80ms' }}>
@@ -73,12 +77,6 @@ export default function About() {
                 </p>
               </div>
             </div>
-
-            <blockquote className="reveal mt-8 border-l border-terra/40 pl-5" style={{ '--delay': '240ms' }}>
-              <p className="font-accent text-[1.1rem] italic leading-[1.5] text-terra-dark">
-                Desenvolver-se é escolher, todos os dias, uma vida mais alinhada com o que realmente importa.
-              </p>
-            </blockquote>
 
             <button
               type="button"
